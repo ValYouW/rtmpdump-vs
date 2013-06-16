@@ -340,10 +340,6 @@ RTMP_Init(RTMP *r)
   r->m_fVideoCodecs = 252.0;
   r->Link.timeout = 30;
   r->Link.swfAge = 30;
-  
-  // Yuval.
-  r->m_fEncoding = 3.0;
-  r->m_bSendEncoding = TRUE;
 }
 
 void
