@@ -32,7 +32,7 @@
 
 #define MAX_PRINT_LEN	2048
 
-__declspec( dllexport ) RTMP_LogLevel RTMP_debuglevel = RTMP_LOGERROR;
+DECL RTMP_LogLevel RTMP_debuglevel = RTMP_LOGERROR;
 
 static int neednl;
 

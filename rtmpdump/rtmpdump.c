@@ -82,8 +82,8 @@ CleanupSockets()
 uint32_t debugTS = 0;
 int pnum = 0;
 
-FILE *netstackdump = 0;
-FILE *netstackdump_read = 0;
+//FILE *netstackdump = 0;
+//FILE *netstackdump_read = 0;
 #endif
 
 uint32_t nIgnoredFlvFrameCounter = 0;

@@ -59,14 +59,14 @@ void RTMP_LogPrintf(const char *format, ...) __attribute__ ((__format__ (__print
 void RTMP_LogStatus(const char *format, ...) __attribute__ ((__format__ (__printf__, 1, 2)));
 void RTMP_Log(int level, const char *format, ...) __attribute__ ((__format__ (__printf__, 2, 3)));
 #else
-  __declspec( dllexport ) void RTMP_LogPrintf(const char *format, ...);
-  __declspec( dllexport ) void RTMP_LogStatus(const char *format, ...);
-  __declspec( dllexport ) void RTMP_Log(int level, const char *format, ...);
+  DECL void RTMP_LogPrintf(const char *format, ...);
+  DECL void RTMP_LogStatus(const char *format, ...);
+  DECL void RTMP_Log(int level, const char *format, ...);
 #endif
-  __declspec( dllexport ) void RTMP_LogHex(int level, const uint8_t *data, unsigned long len);
-  __declspec( dllexport ) void RTMP_LogHexString(int level, const uint8_t *data, unsigned long len);
-  __declspec( dllexport ) void RTMP_LogSetLevel(RTMP_LogLevel lvl);
-  __declspec( dllexport ) RTMP_LogLevel RTMP_LogGetLevel(void);
+  DECL void RTMP_LogHex(int level, const uint8_t *data, unsigned long len);
+  DECL void RTMP_LogHexString(int level, const uint8_t *data, unsigned long len);
+  DECL void RTMP_LogSetLevel(RTMP_LogLevel lvl);
+  DECL RTMP_LogLevel RTMP_LogGetLevel(void);
 
 #ifdef __cplusplus
 }

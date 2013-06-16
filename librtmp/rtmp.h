@@ -34,6 +34,7 @@
 #include <stddef.h>
 
 #include "amf.h"
+#include "log.h"
 
 #ifdef __cplusplus
 extern "C"
@@ -75,6 +76,11 @@ extern "C"
 DECL extern const char RTMPProtocolStringsLower[][7];
 DECL extern const AVal RTMP_DefaultFlashVer;
 DECL extern int RTMP_ctrlC;
+
+#ifdef _DEBUG
+DECL extern FILE *netstackdump;
+DECL extern FILE *netstackdump_read;
+#endif
 
 DECL uint32_t RTMP_GetTime(void);
 

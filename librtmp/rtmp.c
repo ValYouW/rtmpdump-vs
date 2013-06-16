@@ -71,7 +71,7 @@ TLS_CTX RTMP_TLS_ctx;
 
 static const int packetSize[] = { 12, 8, 4, 1 };
 
-__declspec( dllexport ) int RTMP_ctrlC;
+DECL int RTMP_ctrlC;
 
 const char RTMPProtocolStrings[][7] = {
   "RTMP",
@@ -85,7 +85,7 @@ const char RTMPProtocolStrings[][7] = {
   "RTMFP"
 };
 
-__declspec( dllexport ) const char RTMPProtocolStringsLower[][7] = {
+DECL const char RTMPProtocolStringsLower[][7] = {
   "rtmp",
   "rtmpt",
   "rtmpe",
@@ -402,7 +402,7 @@ RTMP_UpdateBufferMS(RTMP *r)
 #endif
 #define DEF_VERSTR	OSS " 10,0,32,18"
 static const char DEFAULT_FLASH_VER[] = DEF_VERSTR;
-__declspec( dllexport ) const AVal RTMP_DefaultFlashVer =
+DECL const AVal RTMP_DefaultFlashVer =
   { (char *)DEFAULT_FLASH_VER, sizeof(DEFAULT_FLASH_VER) - 1 };
 
 static void
@@ -1381,8 +1381,8 @@ RTMP_ClientPacket(RTMP *r, RTMPPacket *packet)
 }
 
 #ifdef _DEBUG
-FILE *netstackdump;
-FILE *netstackdump_read;
+DECL FILE *netstackdump;
+DECL FILE *netstackdump_read;
 #endif
 
 static int
